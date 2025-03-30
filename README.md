@@ -2,46 +2,46 @@
 
 ## 1. Printing:
 ```crt
-pr "Hello World"  // Print a string
-pr x  // Print variable value
+pr "Hello World"
+pr x
 ```
 
 ## 2. Variables and Assignment:
 ```crt
-x = 10  // Assign a number to variable
-name = "John"  // Assign a string
+x = 10
+name = "John"
 ```
 
 ## 3. Input:
 ```crt
-inp x  // Read input from user and store in variable x
+inp x
 ```
 
 ## 4. Arithmetic Operations:
 ```crt
-x = 5 + 3  // Addition
-y = 10 - 2  // Subtraction
-z = 4 * 3  // Multiplication
-w = 15 / 3  // Division
-p = 2 ^ 3  // Exponentiation
+x = 5 + 3
+y = 10 - 2
+z = 4 * 3
+w = 15 / 3
+p = 2 ^ 3
 ```
 
 ## 5. Arrays:
 ```crt
-arr = array<>  // Create an empty array
-arr = append<arr, 10>  // Add an element to the array
-element = get<arr, 0>  // Get element at index 0
-arr = set<arr, 0, 20>  // Modify element at index 0
-len = length<arr>  // Get array length
+arr = array<>
+arr = append<arr, 10>
+element = get<arr, 0>
+arr = set<arr, 0, 20>
+len = length<arr>
 ```
 
 ## 6. Math Functions:
 ```crt
-x = sqrt<16>  // Square root
-y = pow<2, 3>  // Power
-z = sin<45>  // Sine function
-w = cos<60>  // Cosine function
-p = abs<-5>  // Absolute value
+x = sqrt<16>
+y = pow<2, 3>
+z = sin<45>
+w = cos<60>
+p = abs<-5>
 ```
 
 ## 7. Conditions:
@@ -73,20 +73,19 @@ func add<x, y> {
    return x + y
 }
 
-// Function call
 result = add<5, 3>
 ```
 
 ## 10. Comments:
 ```crt
-// Single-line comment
-/// Multi-line comment
+//
+///
 ///
 ```
 
 ## 11. File Import:
 ```crt
-import math  // Import math library
+import math
 ```
 
 ---
@@ -102,7 +101,7 @@ while i <= n <
    sum = sum + i
    i = i + 1
 >
-pr sum  // Output the sum
+pr sum
 ```
 
 ### 2. Array Usage Example:
@@ -111,9 +110,9 @@ arr = array<>
 arr = append<arr, 10>
 arr = append<arr, 20>
 arr = append<arr, 30>
-pr get<arr, 1>  // Output: 20
-arr = set<arr, 1, 25>  // Modify element at index 1
-pr length<arr>  // Output: 3
+pr get<arr, 1>
+arr = set<arr, 1, 25>
+pr length<arr>
 ```
 
 ### 3. Factorial Function Example:
@@ -128,7 +127,6 @@ func factorial<n> {
 
 ### 4. Complete Program Example:
 ```crt
-// Program to calculate the average of three numbers
 pr "Enter three numbers:"
 inp x
 inp y
