@@ -1,130 +1,114 @@
-# Custom Programming Language Course
+Programming Language Guide
 
-Welcome to the course for your custom programming language! This guide will help you understand how to write, execute, and expand code using your language.
+1. Printing:
+   pr value  // to print a value
+   Example: pr "Hello World"
+   Example: pr x  // print variable value
 
----
+2. Variables and Assignment:
+   x = 10  // assign value to variable
+   name = "John"  // assign text
 
+3. Input:
+   inp x  // read value from user and store in variable x
 
----
+4. Arithmetic Operations:
+   x = 5 + 3  // addition
+   y = 10 - 2  // subtraction
+   z = 4 * 3  // multiplication
+   w = 15 / 3  // division
+   p = 2 ^ 3  // power
 
-## 🛠️ **2. Running the Interpreter**
-You can execute scripts written in your custom language by running the Python interpreter:
+5. Arrays:
+   arr = array<>  // create empty array
+   arr = append<arr, 10>  // add element
+   element = get<arr, 0>  // get element
+   arr = set<arr, 0, 20>  // modify element
+   len = length<arr>  // get array length
 
-```bash
-python main.py filename.bd
-```
+6. Math Functions:
+   x = sqrt<16>  // square root
+   y = pow<2, 3>  // power
+   z = sin<45>  // sine
+   w = cos<60>  // cosine
+   p = abs<-5>  // absolute value
 
-If no filename is provided, the interpreter will prompt you to enter the file name manually.
+7. Conditions:
+   if x > 10 <
+      pr "large"
+   >
+   
+   if x > 10 <
+      pr "large"
+   > elif x > 5 <
+      pr "medium"
+   > else <
+      pr "small"
+   >
 
----
+8. Loops:
+   while x < 10 <
+      pr x
+      x = x + 1
+   >
 
-## ✍️ **3. Language Syntax and Examples**
+9. Function Definition:
+   func add<x, y> {
+      return x + y
+   }
+   
+   // function call
+   result = add<5, 3>
 
-### **A. Variables Declaration**
-```plaintext
-x = 5
-y = 10
-```
+10. Comments:
+    // single line comment
+    /// multi-line comment
+    ///
 
-### **B. Printing Values**
-```plaintext
-pr x
-pr y
-```
-_Output:_
-```
-5
-10
-```
+11. File Import:
+    import math  // to import math.bd
 
-### **C. Taking User Input**
-```plaintext
-inp name
-pr name
-```
+Examples:
 
-### **D. Defining Functions**
-```plaintext
-func add<a, b> {
-    return a + b
-}
-```
+1. Calculate sum of numbers from 1 to n:
+   n = 5
+   sum = 0
+   i = 1
+   while i <= n <
+      sum = sum + i
+      i = i + 1
+   >
+   pr sum
 
-### **E. Calling Functions**
-```plaintext
-result = add<5, 10>
-pr result
-```
-_Output:_
-```
-15
-```
+2. Array Usage Example:
+   arr = array<>
+   arr = append<arr, 10>
+   arr = append<arr, 20>
+   arr = append<arr, 30>
+   pr get<arr, 1>  // will print 20
+   arr = set<arr, 1, 25>  // change value
+   pr length<arr>  // will print 3
 
-### **F. Conditional Statements**
-```plaintext
-if x > y <
-    pr "x is greater"
->
-elif x == y <
-    pr "x is equal"
->
-else <
-    pr "y is greater"
->
-```
+3. Factorial Function Example:
+   func factorial<n> {
+      if n <= 1 <
+         return 1
+      >
+      return n * factorial<n - 1>
+   }
 
-### **G. While Loops**
-```plaintext
-counter = 0
-while counter < 5 <
-    pr counter
-    counter = counter + 1
->
-```
-_Output:_
-```
-0
-1
-2
-3
-4
-```
+4. Complete Program Example:
+   // program to calculate average of three numbers
+   pr "Enter three numbers:"
+   inp x
+   inp y
+   inp z
+   avg = (x + y + z) / 3
+   pr "The average is:"
+   pr avg
 
-### **H. Return Values from Functions**
-```plaintext
-func square<n> {
-    return n * n
-}
-result = square<4>
-pr result
-```
-_Output:_
-```
-16
-```
-
----
-
-## ⚠️ **4. Common Errors and Troubleshooting**
-- **SyntaxError:** Ensure all blocks (`if`, `else`, `while`, and functions) are properly closed with `>` or `}`.
-- **Undefined Function:** Verify that the function is defined before being called.
-- **Variable Not Defined:** Always declare variables before using them.
-
----
-
-## 🧩 **5. Advanced Tips**
-- Optimize your functions for faster performance.
-- Use `numba` for computational-heavy tasks.
-- Structure your code into separate `.bd` files for better organization.
-
----
-
-## ✅ **6. Best Practices**
-- Keep your functions small and focused.
-- Use clear and descriptive variable names.
-- Always handle edge cases and invalid inputs.
-
----
-
-That's it! You now have a solid understanding of how to write and execute code using your custom language. Happy coding! 🚀
-
+Important Notes:
+- Each conditional statement and loop must end with >
+- Built-in math functions like sqrt, pow, sin, cos are available
+- Arrays are zero-indexed
+- Conditions and loops can be nested
