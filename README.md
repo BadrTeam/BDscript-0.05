@@ -82,12 +82,6 @@ result = add<5, 3>
 ///
 ///
 ```
-
-## 11. File Import:
-```crt
-import math
-```
-
 ---
 
 # Examples
