@@ -37,11 +37,11 @@ len = length<arr>
 
 ## 6. Math Functions:
 ```crt
-x = sqrt<16>
-y = pow<2, 3>
-z = sin<45>
-w = cos<60>
-p = abs<-5>
+x = sqrt(16)
+y = pow(2, 3)
+z = sin(45)
+w = cos(60)
+p = abs(-5)
 ```
 
 ## 7. Conditions:
